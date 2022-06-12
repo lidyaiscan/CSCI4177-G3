@@ -7,8 +7,8 @@ CSCI 4177 Project Shopping Online
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
 * *Date Created*: 12 06 2022
-* *Last Modification Date*: 12 06 2022
-* *Lab URL*: <>
+* *Last Modification Date*:  06 2022
+* *Lab URL*: <heroku>
 * *Git URL*: <https://git.cs.dal.ca/xinlong/csci4177.git>
 
 ## Authors: Liu xinlong (xn988864@dal.ca)
