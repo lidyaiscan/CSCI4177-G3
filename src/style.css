@@ -1,0 +1,109 @@
+/* General Styles for a default screen size */
+
+/* ======================================== */
+
+body {
+    width: 90%;
+    color: #333;
+    font: normal 16px/150% Arial, Helvetica, sans-serif;
+    background-color: #ededed;
+    margin: 20px auto 0 auto;
+}
+
+.page {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1em;
+    box-sizing: border-box;
+    border: #ccc solid 1px;
+}
+
+.page p {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+h1,
+h2 {
+    color: #273c75;
+    font: bold 2.5em/1em Futura, sans-serif;
+    font-variant: small-caps;
+    border-bottom: 2px #dcdde1 dotted;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.message {
+    height: 150px;
+}
+
+textarea {
+    height: 80%;
+    width: 25%;
+}
+
+.format {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content label {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.registration {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f5f6fa;
+    padding: 1em;
+    position: relative;
+    border-radius: 3px;
+}
+
+
+.registration input {
+    width: 30em;
+    display: block;
+    border: 1px solid #ddd;
+    padding: .6em;
+    border-radius: 4px;
+}
+
+.registration input.active {
+    /* write your CSS code to alter the border 
+	and background color of the input control */
+    border-color: #00a8ff;
+    /*border-width: 1px;*/
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
+.registration button {
+    border-radius: 5px;
+    background-color: #00b894;
+    border: 1px solid #00cec9;
+    color: white;
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}
+
+footer {
+    margin-top: 0.2em;
+    padding: 1em;
+    text-align: center;
+}
