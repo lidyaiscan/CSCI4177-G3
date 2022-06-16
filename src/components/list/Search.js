@@ -1,5 +1,6 @@
 /* Code modified from the tutorial by Saleh Mubashar, from: https://dev.to/salehmubashar/search-bar-in-react-js-545l */
 import { React, useState } from 'react'
+import Navigation from '../nav/nav';
 import data from "./ListData.json"
 import '../../App.css';
 import chocolate from "../../assets/chocolate.jpg"
@@ -15,17 +16,19 @@ function Search(props) {
             return el.name.toLowerCase().includes(props.input)
         }
     })
-    //format the data to look like a product listing
     return (
-        <div className='tile-listings col-md-12'>
-            {filteredData.map((item) => (
-                <div key={item.id}>
-                    <img src={chocolate} alt="chocolate" className='listing-photo' />
-                    <p>{item.name}</p>
-                    <p>{item.rating} stars</p>
-                    <p>${item.price}</p>
-                </div>
-            ))}
+        <div>
+            <Navigation />
+            <div className='tile-listings col-md-12'>
+                {filteredData.map((item) => (
+                    <div key={item.id}>
+                        <img src={chocolate} alt="chocolate" className='listing-photo' />
+                        <p>{item.name}</p>
+                        <p>{item.rating} stars</p>
+                        <p>${item.price}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

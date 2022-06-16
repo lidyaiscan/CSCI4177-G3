@@ -40,10 +40,10 @@ function Login(props) {
     return (
         <React.Fragment>
             <div className="App">
+                <Nav />
                 <section id="description">
                     <h1>Login</h1>
                 </section>
-                <Nav />
                 <div>
 
                     <label>First Name</label>

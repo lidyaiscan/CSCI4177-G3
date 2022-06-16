@@ -1,3 +1,21 @@
+#top {
+    display: flex;
+}
+
+.top-links {
+    margin: 0 1%;
+}
+
+.top-links a {
+    display: inline-block;
+    font-size: 1em;
+    color: black;
+}
+
+#top-links a:hover {
+    background-color: #39d12c;
+}
+
 /* Code modified from the tutorial by Chinwike Maduabuchi, from: https://blog.logrocket.com/create-responsive-navbar-react-css/ */
 .navigation {
     width: 100%;
@@ -30,25 +48,4 @@
     display: block;
     width: 100%;
     font-weight: bold;
-}
-
-#search {
-    display: inline-flex;
-    margin-right: 4%;
-}
-
-#top-links {
-    margin: 1% 0;
-    display: flex-row inline-block;
-    justify-content: flex-end;
-}
-
-#top-links a {
-    font-size: 1em;
-    color: black;
-    margin-right: 5%;
-}
-
-#top-links a:hover {
-    background-color: #39d12c;
 }
