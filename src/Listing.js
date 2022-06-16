@@ -1,8 +1,7 @@
 import "./App.css";
 import chocolate from "./assets/chocolate.jpg";
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import CounterInput from 'react-bootstrap-counter';
 import { Button } from "react-bootstrap";
 
 //Guide to implement counter with increment and decrement buttons by Tutorial Funda: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
@@ -45,6 +44,7 @@ function Listing() {
             <div id="product-detail">
                 <div className="listingDetailImg col-md-3">
                     <img src={chocolate} alt="chocolate" className="listing-photo-large" />
+                    <Button className="cart">Favourite</Button>
                 </div>
                 <div className="listingDetail">
                     <h2>Chocolate, 100g</h2>
@@ -57,6 +57,7 @@ function Listing() {
                     <ButtonIncrement onClickFunc={incrementCounter} />
                     <Button className="cart">Add to cart</Button>
                 </div>
+
             </div>
             <div className="listingDescription">
                 <h3>Product description</h3>
