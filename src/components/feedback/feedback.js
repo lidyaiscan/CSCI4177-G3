@@ -1,8 +1,6 @@
 import '../../style.css';
 import React, { useState } from "react";
 import FeedbackResult from '../feedback/feedback_result';
-import Nav from '../nav/nav';
-import Foot from '../foot/foot';
 
 function Form() {
 
@@ -49,7 +47,6 @@ function Form() {
     return (
         !isvalidate ? (
             <React.Fragment >
-                <Nav />
                 <div className="App">
                     <section id="description">
                         <h1>Contact Us</h1>
@@ -96,7 +93,6 @@ function Form() {
                             }
                         </div>
                     </div>
-                    <Foot />
                 </div>
             </React.Fragment >
         ) : (

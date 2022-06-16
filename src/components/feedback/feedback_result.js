@@ -2,14 +2,11 @@ import '../../style.css';
 
 import React from "react";
 import { Link } from 'react-router-dom';
-import Nav from '../nav/nav';
-import Foot from '../foot/foot';
 
 function feedbackresult(props) {
 
     return (
         <React.Fragment>
-            <Nav />
             <div className="App">
                 <section id="description">
                     <h1>Contact Information</h1>
@@ -23,7 +20,6 @@ function feedbackresult(props) {
                     <br></br>
 
                 </div>
-                <Foot />
             </div>
         </React.Fragment>
 
