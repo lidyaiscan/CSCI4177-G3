@@ -8,7 +8,7 @@ export default function Navigation() {
 
     const navigateSearch = () => {
         navigate('/search');
-    };
+    }; 
     return (
         <div>
             <div id="top">
