@@ -1,9 +1,6 @@
 import '../../style.css';
-
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import Nav from '../nav/nav';
-import Foot from '../foot/foot';
 
 function Login(props) {
     const [firstname, changeFirstName] = useState("");
@@ -39,7 +36,6 @@ function Login(props) {
 
     return (
         <React.Fragment>
-            <Nav />
             <div className="App">
                 <section id="description">
                     <h1>Login</h1>
@@ -73,7 +69,6 @@ function Login(props) {
                     <br></br>
                     <Link to='/register'>New User</Link>
                 </div>
-                <Foot />
             </div>
         </React.Fragment>
 

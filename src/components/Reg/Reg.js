@@ -1,8 +1,6 @@
 import '../../style.css';
 import React, { useState } from "react";
 import Profile from '../Profile/Profile';
-import Nav from '../nav/nav';
-import Foot from '../foot/foot';
 
 function Form() {
     const [firstname, changeFirstName] = useState("");
@@ -49,7 +47,6 @@ function Form() {
     return (
         !isvalidate ? (
             <React.Fragment>
-                <Nav />
                 <div className="App">
                     <section id="description">
                         <h1>Registration</h1>
@@ -95,7 +92,6 @@ function Form() {
                             }
                         </div>
                     </div>
-                    <Foot />
                 </div>
             </React.Fragment>
         ) : (

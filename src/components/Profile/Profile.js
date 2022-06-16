@@ -1,15 +1,11 @@
 import '../../style.css';
-
 import React from "react";
 import { Link } from 'react-router-dom';
-import Nav from '../nav/nav';
-import Foot from '../foot/foot';
 
 function Profile(props) {
 
     return (
         <React.Fragment>
-            <Nav />
             <div className="App">
                 <section id="description">
                     <h1>Profile</h1>
@@ -23,7 +19,6 @@ function Profile(props) {
                     <Link to="/login">Go To Login</Link>
                 </div>
             </div>
-            <Foot />
         </React.Fragment>
 
     );
