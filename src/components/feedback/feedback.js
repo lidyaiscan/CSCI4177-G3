@@ -1,6 +1,8 @@
 import '../../style.css';
 import React, { useState } from "react";
 import FeedbackResult from '../feedback/feedback_result';
+import Nav from '../nav/nav';
+import Foot from '../foot/foot';
 
 function Form() {
 
@@ -50,6 +52,7 @@ function Form() {
                 <section id="description">
                     <h1>Contact Us</h1>
                 </section>
+                <Nav />
                 <div>
                     <div>
                         <label>Name:</label><span>* Letters only (non-case-sensitive)</span>
@@ -91,6 +94,7 @@ function Form() {
                         }
                     </div>
                 </div>
+                <Foot />
             </div>
         ) : (
             <FeedbackResult name={name} email={email} phone={phone} message={message} />
