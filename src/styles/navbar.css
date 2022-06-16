@@ -1,0 +1,54 @@
+/* Code modified from the tutorial by Chinwike Maduabuchi, from: https://blog.logrocket.com/create-responsive-navbar-react-css/ */
+.navigation {
+    width: 100%;
+    align-items: center;
+    margin: 1% 0 2%;
+}
+
+.navigation-menu {
+    background-color: #25911c;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2em;
+}
+
+.navigation-menu ul {
+    display: flex;
+}
+
+.navigation-menu li {
+    list-style-type: none;
+    margin: 3%;
+}
+
+.navigation-menu li:hover {
+    background-color: #39d12c;
+}
+
+.navigation-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}
+
+#search {
+    display: inline-flex;
+    margin-right: 4%;
+}
+
+#top-links {
+    margin: 1% 0;
+    display: flex-row inline-block;
+    justify-content: flex-end;
+}
+
+#top-links a {
+    font-size: 1em;
+    color: black;
+    margin-right: 5%;
+}
+
+#top-links a:hover {
+    background-color: #39d12c;
+}

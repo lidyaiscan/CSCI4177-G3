@@ -49,10 +49,10 @@ function Form() {
     return (
         !isvalidate ? (
             <div className="App">
+                <Nav />
                 <section id="description">
                     <h1>Registration</h1>
                 </section>
-                <Nav />
                 <div>
 
                     <label>First Name</label>
