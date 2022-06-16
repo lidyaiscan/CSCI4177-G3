@@ -48,54 +48,57 @@ function Form() {
 
     return (
         !isvalidate ? (
-            <div className="App">
-                <section id="description">
-                    <h1>Contact Us</h1>
-                </section>
+            <React.Fragment >
                 <Nav />
-                <div>
-                    <div>
-                        <label>Name:</label><span>* Letters only (non-case-sensitive)</span>
-                        <br></br>
-                        <input type="text" placeholder="Name" name="name" id="name"
-                            onChange={(event) => changeName(event.target.value)}
-                        ></input>
+                <div className="App">
+                    <section id="description">
+                        <h1>Contact Us</h1>
+                    </section>
 
-                        <br></br>
-                    </div>
                     <div>
-                        <label>Email:</label><span>* Must follow the traditional email format</span>
-                        <br></br>
-                        <input type="email" placeholder="Email" name="email" id="email"
-                            onChange={(event) => changeEmail(event.target.value)}
-                        ></input><br></br>
+                        <div>
+                            <label>Name:</label><span>* Letters only (non-case-sensitive)</span>
+                            <br></br>
+                            <input type="text" placeholder="Name" name="name" id="name"
+                                onChange={(event) => changeName(event.target.value)}
+                            ></input>
+
+                            <br></br>
+                        </div>
+                        <div>
+                            <label>Email:</label><span>* Must follow the traditional email format</span>
+                            <br></br>
+                            <input type="email" placeholder="Email" name="email" id="email"
+                                onChange={(event) => changeEmail(event.target.value)}
+                            ></input><br></br>
+                        </div>
+                        <div>
+                            <label>Phone:</label><span>* Number only</span>
+                            <br></br>
+                            <input type="text" placeholder="Phone" name="phone" id="phone"
+                                onChange={(event) => changePhone(event.target.value)}
+                            ></input><br></br>
+                        </div>
+                        <div class="message">
+                            <label>Message:</label>
+                            <br></br>
+                            <textarea type="text" placeholder="Input messages" name="message" id="message"
+                                onChange={(event) => changeMessage(event.target.value)}
+                            ></textarea>
+                            <br></br>
+                        </div>
+                        <button onClick={() => CheckValidate(name, email, phone, message)} type="Submit" id="enter">Contact</button>
+                        <div>
+                            {
+                                errorinfo.map((item, index) => (
+                                    <p key={index}>{item}</p>
+                                ))
+                            }
+                        </div>
                     </div>
-                    <div>
-                        <label>Phone:</label><span>* Number only</span>
-                        <br></br>
-                        <input type="text" placeholder="Phone" name="phone" id="phone"
-                            onChange={(event) => changePhone(event.target.value)}
-                        ></input><br></br>
-                    </div>
-                    <div class="message">
-                        <label>Message:</label>
-                        <br></br>
-                        <textarea type="text" placeholder="Input messages" name="message" id="message"
-                            onChange={(event) => changeMessage(event.target.value)}
-                        ></textarea>
-                        <br></br>
-                    </div>
-                    <button onClick={() => CheckValidate(name, email, phone, message)} type="Submit" id="enter">Contact</button>
-                    <div>
-                        {
-                            errorinfo.map((item, index) => (
-                                <p key={index}>{item}</p>
-                            ))
-                        }
-                    </div>
+                    <Foot />
                 </div>
-                <Foot />
-            </div>
+            </React.Fragment >
         ) : (
             <FeedbackResult name={name} email={email} phone={phone} message={message} />
         )
