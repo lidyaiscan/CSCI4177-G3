@@ -8,19 +8,8 @@ export default function Navigation() {
 
     const navigateSearch = () => {
         navigate('/search');
-    }; 
+    };
     return (
-<<<<<<< HEAD
-        <nav>
-            <a href="/login">Login</a>&nbsp;&nbsp;&nbsp;
-            <a href="/register">Register</a>&nbsp;&nbsp;&nbsp;
-            <a href="">Products</a>&nbsp;&nbsp;&nbsp;
-            <a href="">Shopping Cart</a>&nbsp;&nbsp;&nbsp;
-            <a href="/contact">Contact Us</a>&nbsp;&nbsp;&nbsp;
-        </nav>
-    );
-
-=======
         <div>
             <div id="top">
                 <div id="search">
@@ -61,5 +50,4 @@ export default function Navigation() {
             </nav>
         </div>
     )
->>>>>>> xinlong
 }
