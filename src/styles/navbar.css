@@ -1,0 +1,51 @@
+#top {
+    display: flex;
+}
+
+.top-links {
+    margin: 0 1%;
+}
+
+.top-links a {
+    display: inline-block;
+    font-size: 1em;
+    color: black;
+}
+
+#top-links a:hover {
+    background-color: #39d12c;
+}
+
+/* Code modified from the tutorial by Chinwike Maduabuchi, from: https://blog.logrocket.com/create-responsive-navbar-react-css/ */
+.navigation {
+    width: 100%;
+    align-items: center;
+    margin: 1% 0 2%;
+}
+
+.navigation-menu {
+    background-color: #25911c;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2em;
+}
+
+.navigation-menu ul {
+    display: flex;
+}
+
+.navigation-menu li {
+    list-style-type: none;
+    margin: 3%;
+}
+
+.navigation-menu li:hover {
+    background-color: #39d12c;
+}
+
+.navigation-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+}

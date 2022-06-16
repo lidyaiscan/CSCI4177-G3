@@ -39,11 +39,12 @@ function Login(props) {
 
     return (
         <React.Fragment>
+            <Nav />
             <div className="App">
                 <section id="description">
                     <h1>Login</h1>
                 </section>
-                <Nav />
+
                 <div>
 
                     <label>First Name</label>
@@ -70,7 +71,7 @@ function Login(props) {
                         }
                     </div>
                     <br></br>
-
+                    <Link to='/register'>New User</Link>
                 </div>
                 <Foot />
             </div>

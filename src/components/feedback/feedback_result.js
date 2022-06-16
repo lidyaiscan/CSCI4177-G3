@@ -9,11 +9,12 @@ function feedbackresult(props) {
 
     return (
         <React.Fragment>
+            <Nav />
             <div className="App">
                 <section id="description">
                     <h1>Contact Information</h1>
                 </section>
-                <Nav />
+
                 <div>
                     <label>Name:{props.name}</label><br />
                     <label>Email:{props.email}</label><br />
