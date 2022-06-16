@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { React, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navigation from './components/nav/nav';
 
 import carrot from './assets/carrot.jpg';
@@ -8,6 +9,12 @@ import potato from './assets/potato.jpg';
 import tomato from './assets/tomato.jpg';
 
 function App() {
+    const navigate = useNavigate();
+
+    const navigateListing = () => {
+        navigate('/listing');
+    };
+
     return (
         <div className="App">
             <header>
@@ -17,7 +24,7 @@ function App() {
                 <h1>Grocery Deals</h1>
                 <div className='tile-listings col-md-12'>
                     <div className='listing'>
-                        <a href="/listing1">
+                        <a href="/listing" onClick={navigateListing}>
                             <img src={carrot} alt="carrots" className='listing-photo' />
                             <p>Carrots</p>
                             <p>$4.99/3lb bag</p>
@@ -25,7 +32,7 @@ function App() {
                         </a>
                     </div>
                     <div>
-                        <a href="/listing2">
+                        <a href="/listing" onClick={navigateListing}>
                             <img src={potato} alt="potato" className='listing-photo' />
                             <p>Potatoes</p>
                             <p>$2.99/lb</p>
@@ -33,7 +40,7 @@ function App() {
                         </a>
                     </div>
                     <div>
-                        <a href="/listing3">
+                        <a href="/listing" onClick={navigateListing}>
                             <img src={tomato} alt="tomato" className='listing-photo' />
                             <p>Tomatoes</p>
                             <p>$2.99/lb</p>

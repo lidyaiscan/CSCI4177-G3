@@ -1,9 +1,10 @@
 /* Code modified from the tutorial by Saleh Mubashar, from: https://dev.to/salehmubashar/search-bar-in-react-js-545l */
-import { React, useState } from 'react'
+import * as React from 'react'
 import Navigation from '../nav/nav';
 import data from "./ListData.json"
 import '../../App.css';
 import chocolate from "../../assets/chocolate.jpg"
+import { Form, Dropdown, DropdownButton } from 'react-bootstrap';
 
 function Search(props) {
     const filteredData = data.filter((el) => {
@@ -19,6 +20,13 @@ function Search(props) {
     return (
         <div>
             <Navigation />
+            <Form>
+                <Form.Group controlId="searchBar">
+                    <Form.Control id="search" type="text" placeholder="Search products" fullwidth />
+                    <button type="Submit" value="Submit" className='Submit'>Submit</button>
+                </Form.Group>
+            </Form>
+
             <div className='tile-listings col-md-12'>
                 {filteredData.map((item) => (
                     <div key={item.id}>

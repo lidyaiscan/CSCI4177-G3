@@ -10,6 +10,7 @@ import Profile from './components/Profile/Profile';
 import Login from './components/Login/Login';
 import Contact from './components/feedback/feedback';
 import Search from './components/list/Search';
+import Listing from './Listing';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -22,6 +23,7 @@ ReactDOM.render(
                 <Route path="/login" element={<Login />}></Route>
                 <Route path="/search" element={<Search />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/listing" element={<Listing />}></Route>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,
