@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Product from "../Products/Product";
 import { useState } from "react";
 export default function Favourites() {
@@ -28,9 +26,7 @@ export default function Favourites() {
 						key={index}
 						product={name}
 						index={index}
-						removeFromList={() =>
-							removeFromList(index)
-						}
+						removeFromList={() => removeFromList(index)}
 					/>
 				))}
 			</div>

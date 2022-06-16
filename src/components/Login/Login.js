@@ -36,7 +36,7 @@ function Login(props) {
 	}
 
 	return (
-		<div>
+		<div className="App">
 			<section id="description">
 				<h1>Login</h1>
 			</section>

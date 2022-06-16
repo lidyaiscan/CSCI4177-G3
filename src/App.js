@@ -9,6 +9,8 @@ import Profile from "./components/Reg/Reg";
 import Login from "./components/Login/Login";
 import Contact from "./components/feedback/feedback";
 import Favourites from "./components/Favourites/Favourites";
+// Importing bootstrap to be used across the app
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 	return (

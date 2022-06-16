@@ -42,7 +42,7 @@ export default function Navigation() {
 				<div className="navigation-menu">
 					<ul>
 						<li>
-							<Link to="/products">Products</Link>
+							<Link to="">Products</Link>
 						</li>
 						<li>
 							<Link to="/flyers">Flyers</Link>
@@ -51,7 +51,7 @@ export default function Navigation() {
 							<Link to="/delivery">Delivery & pick-up</Link>
 						</li>
 						<li>
-							<Link to="/about">Our Story</Link>
+							<Link to="/favourites">Favourites</Link>
 						</li>
 						<li>
 							<Link to="/contact">Contact Us</Link>
