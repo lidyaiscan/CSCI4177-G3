@@ -1,0 +1,13 @@
+.card {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.Cards {
+    display: inline-block;
+}
+
+.AdminDashboard {
+    display: flex;
+    align-items: center;
+}
