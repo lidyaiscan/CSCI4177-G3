@@ -3,7 +3,8 @@
 /* ======================================== */
 
 body {
-    width: 90%;
+    max-width: 100%;
+    padding: 1% 2%;
     color: #333;
     font: normal 16px/150% Arial, Helvetica, sans-serif;
     background-color: #ededed;

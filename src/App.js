@@ -10,8 +10,13 @@ import Login from "./components/Login/Login";
 import AdminLogin from "./components/AdminLogin/AdminLogin";
 import Contact from "./components/feedback/feedback";
 import Favourites from "./components/Favourites/Favourites";
+<<<<<<< HEAD
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
 import AdminProducts from "./components/AdminProducts/AdminProducts";
+=======
+import Listing from "./Listing";
+import Search from "./components/list/Search";
+>>>>>>> a02f4c2 (Styled the product listing page & merged code)
 // Importing bootstrap to be used across the app
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -30,6 +35,10 @@ function App() {
                     <Route path="/favourites" element={<Favourites />}></Route>
                     <Route path="/adminDashboard" element={<AdminDashboard />}></Route>
                     <Route path="/adminProducts" element={<AdminProducts />}></Route>
+                    <Route path="/contact" element={<Contact />}></Route>
+                    <Route path="/favourites" element={<Favourites />}></Route>
+                    <Route path="/listing" element={<Listing />}></Route>
+                    <Route path="/search" element={<Search />}></Route>
                 </Routes>
                 <Foot />
             </BrowserRouter>
