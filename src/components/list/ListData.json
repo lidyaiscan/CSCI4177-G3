@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Chocolate 1",
+        "rating": "4.7",
+        "price": "3.99"
+    },
+    {
+        "id": 2,
+        "name": "Chocolate 2",
+        "rating": "3.3",
+        "price": "4.99"
+    },
+    {
+        "id": 3,
+        "name": "Chocolate 3",
+        "rating": "4.5",
+        "price": "2.99"
+    },
+    {
+        "id": 4,
+        "name": "Chocolate 4",
+        "rating": "2.1",
+        "price": "3.49"
+    },
+    {
+        "id": 5,
+        "name": "Carrot 5",
+        "rating": "2.5",
+        "price": "2.99"
+    },
+    {
+        "id": 6,
+        "name": "Potato 6",
+        "rating": "4.3",
+        "price": "7.99"
+    },
+    {
+        "id": 7,
+        "name": "Candy 7",
+        "rating": "4.0",
+        "price": "2.49"
+    },
+    {
+        "id": 8,
+        "name": "Soup 8",
+        "rating": "4.1",
+        "price": "5.49"
+    },
+    {
+        "id": 9,
+        "name": "Chocolate 9",
+        "rating": "5.0",
+        "price": "3.99"
+    },
+    {
+        "id": 10,
+        "name": "Chocolate 10",
+        "rating": "5",
+        "price": "2.49"
+    }
+]
