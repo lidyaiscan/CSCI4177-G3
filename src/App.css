@@ -1,7 +1,7 @@
 * {
+    box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: auto;
-    box-sizing: border-box;
 }
 
 .App {
@@ -71,4 +71,31 @@
 .listing-photo {
     width: 275px;
     height: 200px;
+}
+
+.listing-photo-large {
+    width: 450px;
+}
+
+#product-detail {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#product-detail p {
+    font-size: 1.5rem;
+}
+
+.counter {
+    margin-Left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.cart {
+    margin-left: 1rem;
+    font-size: 1.5rem !important;
+}
+
+.listingDescription p {
+    font-size: 1.2rem;
 }

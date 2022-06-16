@@ -9,26 +9,30 @@ import Profile from "./components/Reg/Reg";
 import Login from "./components/Login/Login";
 import Contact from "./components/feedback/feedback";
 import Favourites from "./components/Favourites/Favourites";
+import Listing from "./Listing";
+import Search from "./components/list/Search";
 // Importing bootstrap to be used across the app
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-	return (
-		<div>
-			<BrowserRouter>
-				<Nav />
-				<Routes>
-					<Route path="" element={<Home />}></Route>
-					<Route path="/register" element={<Register />}></Route>
-					<Route path="/profile" element={<Profile />}></Route>
-					<Route path="/login" element={<Login />}></Route>
-					<Route path="/contact" element={<Contact />}></Route>
-					<Route path="/favourites" element={<Favourites />}></Route>
-				</Routes>
-				<Foot />
-			</BrowserRouter>
-		</div>
-	);
+    return (
+        <div>
+            <BrowserRouter>
+                <Nav />
+                <Routes>
+                    <Route path="" element={<Home />}></Route>
+                    <Route path="/register" element={<Register />}></Route>
+                    <Route path="/profile" element={<Profile />}></Route>
+                    <Route path="/login" element={<Login />}></Route>
+                    <Route path="/contact" element={<Contact />}></Route>
+                    <Route path="/favourites" element={<Favourites />}></Route>
+                    <Route path="/listing" element={<Listing />}></Route>
+                    <Route path="/search" element={<Search />}></Route>
+                </Routes>
+                <Foot />
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
