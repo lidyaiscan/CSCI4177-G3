@@ -8,7 +8,7 @@ CSCI 4177 Project Shopping Online
 
 * *Date Created*: 12 06 2022
 * *Last Modification Date*:  06 2022
-* *Lab URL*: <heroku>
+* *Lab URL*: <groceryonline-csci4177-group3.herokuapp.com/>
 * *Git URL*: <https://git.cs.dal.ca/xinlong/csci4177.git>
 
 ## Authors: Liu xinlong (xn988864@dal.ca)
