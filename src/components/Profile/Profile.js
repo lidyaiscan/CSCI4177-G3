@@ -9,11 +9,12 @@ function Profile(props) {
 
     return (
         <React.Fragment>
+            <Nav />
             <div className="App">
                 <section id="description">
                     <h1>Profile</h1>
                 </section>
-                <Nav />
+
                 <div>
                     <label>FirstName:{props.in_firstname}</label><br />
                     <label>LastName:{props.in_lastname}</label><br />
