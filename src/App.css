@@ -77,6 +77,10 @@
     width: 450px;
 }
 
+.listingDetailImg {
+    text-align: center;
+}
+
 #product-detail {
     display: flex;
     margin-bottom: 2%;
