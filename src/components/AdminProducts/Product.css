@@ -1,0 +1,60 @@
+.Alert {
+    margin: 30px;
+    width: 75%;
+}
+
+.Content {
+    background-color: white;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.Header {
+    padding: 10px;
+}
+
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 40px;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+
+.Product {
+    margin: 30px;
+    overflow: auto;
+}
+
+.Container {
+    padding: 10px;
+    margin-bottom: 40px;
+    width: 80%;
+    border: solid #E5E5E5 1px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.Info {
+    display: flex;
+}
+
+.Actions {
+    float: right;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.Img {
+    padding: 10px;
+    margin-left: 30px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
