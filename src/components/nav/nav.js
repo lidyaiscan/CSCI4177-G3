@@ -21,14 +21,14 @@ export default function Navigation() {
                                 placeholder="Search products"
                                 fullwidth
                             />
-                            <button
+                            <span><button
                                 type="Submit"
                                 value="Submit"
                                 className="Submit"
                                 onClick={navigateSearch}
                             >
                                 Submit
-                            </button>
+                            </button></span>
                         </Form.Group>
                     </Form>
                 </div>
