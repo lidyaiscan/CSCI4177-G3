@@ -4,7 +4,7 @@
 
 * *Date Created*: June 12 2022
 * *Last Modification Date*: June 16 2022
-* *Heroku Link*: http://groceryonline-csci4177-group3.herokuapp.com/
+* *Heroku Link*: https://food4u-csci4177.herokuapp.com/
 * *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/main
 
 ## Authors
