@@ -19,7 +19,6 @@ function Search(props) {
     })
     return (
         <div>
-            <Navigation />
             <Form>
                 <Form.Group controlId="searchBar">
                     <Form.Control id="search" type="text" placeholder="Search products" fullwidth />

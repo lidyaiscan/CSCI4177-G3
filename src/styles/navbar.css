@@ -2,6 +2,10 @@
     display: flex;
 }
 
+#search {
+    display: inline-block !important;
+}
+
 .top-links {
     margin: 0 1%;
 }
@@ -16,7 +20,6 @@
     background-color: #39d12c;
 }
 
-/* Code modified from the tutorial by Chinwike Maduabuchi, from: https://blog.logrocket.com/create-responsive-navbar-react-css/ */
 .navigation {
     width: 100%;
     align-items: center;
