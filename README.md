@@ -2,8 +2,8 @@
 
 # CSCI 4177 Group 3 Project
 
-* *Date Created*: 12 06 2022
-* *Last Modification Date*: 16 06 2022
+* *Date Created*: June 12 2022
+* *Last Modification Date*: June 16 2022
 * *Heroku Link*: 
 * *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/main
 
@@ -30,16 +30,21 @@ This application was built from React, uses React Bootstrap and uses the react-r
 
 * [React] (https://reactjs.org/)
 * [React Bootstrap] (https://react-bootstrap.github.io/)
+* [React Router] (https://github.com/remix-run/react-router)
 
 ## Sources Used
 
 All images were taken from the below links
 
-    https://www.emojipng.com/preview/485555
-    https://h5p.org/chart#example=6729
-    https://www.istockphoto.com/photos/money-bag
-    https://commons.wikimedia.org/wiki/File:Schedule_or_Calendar_Flat_Icon.svg
-    https://pngtree.com/freepng/vector-back-icon_4190818.html
-    https://www.onlinewebfonts.com/icon/103668
-    https://www.pngitem.com/so/trash-icon/
-    https://en.wikipedia.org/wiki/Honeycrisp
+    Leafy green emoji: https://www.emojipng.com/preview/485555
+    Pie chart: https://h5p.org/chart#example=6729
+    Money bag: https://www.istockphoto.com/photos/money-bag
+    Calender icon: https://commons.wikimedia.org/wiki/File:Schedule_or_Calendar_Flat_Icon.svg
+    Back icon: https://pngtree.com/freepng/vector-back-icon_4190818.html
+    Edit/pencil icon: https://www.onlinewebfonts.com/icon/103668
+    Trash bin icon: https://www.pngitem.com/so/trash-icon/
+    Honeycrisp apple: https://en.wikipedia.org/wiki/Honeycrisp
+    Carrots: https://commons.wikimedia.org/wiki/File:Carrot-fb.jpg
+    Potatoes: https://www.publicdomainpictures.net/en/view-image.php?image=137873&picture=potato
+    Tomatoes: https://commons.wikimedia.org/wiki/File:Tomato_je.jpg
+    Chocolate: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
