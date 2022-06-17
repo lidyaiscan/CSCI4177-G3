@@ -1,23 +1,45 @@
+<!--- The following README.md sample file was adapted from https://gist.github.com/PurpleBooth/109311bb0361f32d87a2#file-readme-template-md by Gabriella Mosquera for academic use ---> 
+
 # CSCI 4177 Group 3 Project
-Gitlab repository: https://git.cs.dal.ca/lidya/csci-4177-group-3-project.git
-Heroku site:
 
-----------
-References
-1. Tutorial Funda (Apr 9, 2021). How to Increment and Decrement Number Using React Hooks. Tutorial Funda. Accessed June 16, 2022, from: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
-2. Saleh Mubashar (Jan 3, 2022). Search Bar in React JS! DEV Community. Accessed June 16, 2022, from: https://dev.to/salehmubashar/search-bar-in-react-js-545l
+* *Date Created*: 12 06 2022
+* *Last Modification Date*: 16 06 2022
+* *Heroku Link*: 
+* *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/main
 
-----------
-Image attributions:
-1. Carrot image (carrot.jpg) is used from the following web link: https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Carrot-fb.jpg/800px-Carrot-fb.jpg?20160415193542
-Author: Collegestudent33. Retrieved June 6, 2022, from Wikipedia Commons: https://commons.wikimedia.org/wiki/File:Carrot-fb.jpg
+## Authors
 
-2. Potato image (potato.jpg) is used from the following web link: https://www.publicdomainpictures.net/pictures/140000/velka/potato.jpg
-Author: Charles Rondeau. Retrieved June 6, 2022, from PublicDomainPictures.net: https://www.publicdomainpictures.net/en/view-image.php?image=137873&picture=potato
+* [Lidya Iscan-Insense](lidyaiscan@dal.ca) - *(Developer)*
+* [Liam Brown](liam.brown@dal.ca) - *(Developer)*
+* [Ngoc Song Ha Pho](songhapho@dal.ca) - *(Developer)*
+* [Xinlong Liu](xn988864@dal.ca) - *(Developer)*
 
-3. Tomato image (tomato.jpg) is used from the following web link: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/721px-Tomato_je.jpg?20050516221203
-Author: Softeis. Retrieved June 6, 2022, from Wikipedia Commons: https://commons.wikimedia.org/wiki/File:Tomato_je.jpg
 
-4. Chocolate image (chocolate.jpg) is used from the following web link: https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_%28blue_background%29.jpg/666px-Chocolate_%28blue_background%29.jpg?20180505175225
-Author: nagualdesign. Retrieved June 6, 2022, from Wikipedia Commons: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
+## Getting Started
 
+See deployment for notes on how to deploy the project on a live system.
+
+## Deployment
+
+To deploy the react app on your local machine, in your terminal run the command "npm start".
+The live application has also been deployed on Heroku and can be accessed using the link provided above.
+
+## Built With
+
+This application was built from React, uses React Bootstrap and uses the react-router-dom package.
+
+* [React] (https://reactjs.org/)
+* [React Bootstrap] (https://react-bootstrap.github.io/)
+
+## Sources Used
+
+All images were taken from the below links
+
+    https://www.emojipng.com/preview/485555
+    https://h5p.org/chart#example=6729
+    https://www.istockphoto.com/photos/money-bag
+    https://commons.wikimedia.org/wiki/File:Schedule_or_Calendar_Flat_Icon.svg
+    https://pngtree.com/freepng/vector-back-icon_4190818.html
+    https://www.onlinewebfonts.com/icon/103668
+    https://www.pngitem.com/so/trash-icon/
+    https://en.wikipedia.org/wiki/Honeycrisp

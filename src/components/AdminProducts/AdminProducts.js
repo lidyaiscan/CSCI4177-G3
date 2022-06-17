@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Product from './Product';
-import Modal from 'react-bootstrap/Modal';
+import AddProduct from './AddProduct';
+import NavBar from 'react-bootstrap/NavBar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
+import Modal from 'react-bootstrap/Modal';
 import back from '../../assets/back.jpg';
 
 function Products() {
@@ -26,44 +30,91 @@ function Products() {
     const [item, setItem] = useState();
     const [name, setName] = useState();
 
-    const [showPopup, setShowPopup] = useState(false);
-    const handleClosePopup = () => setShowPopup(false);
+    const [addForm, setAddForm] = useState(false);
 
-    const [showSuccess, setShowSuccess] = useState(false);
+    const [showDeletePopup, setShowDeletePopup] = useState(false);
+    const handleCloseDeletePopup = () => setShowDeletePopup(false);
+
+    const [showDeleteSuccess, setShowDeleteSuccess] = useState(false);
+
+    const [showAddPopup, setShowAddPopup] = useState(false);
+    const handleCloseAddPopup = () => setShowAddPopup(false);
+
+    const [showAddSuccess, setShowAddSuccess] = useState(false);
+
+    function addItem() {
+        setAddForm(true);
+    }
 
     function removeFromList(index) {
         setItem(index);
         var copy = [...products];
         setName(copy[index]);
-        console.log(item);
-        console.log(name);
-        setShowPopup(true);
+        setShowDeletePopup(true);
+    }
+
+    function addToList(name) {
+        setName(name);
+        setShowAddPopup(true);
     }
 
     function remove() {
         var copy = [...products];
         copy.splice(item, 1);
-        setShowPopup(false);
-        setShowSuccess(true);
+        setShowDeletePopup(false);
+        setShowDeleteSuccess(true);
         setProducts(copy);
+    }
+
+    function add() {
+        var copy = [...products];
+        copy.push(name);
+        setShowAddPopup(false);
+        setShowAddSuccess(true);
+        setAddForm(false);
+        setProducts(copy);
+    }
+
+    function cancel() {
+        setAddForm(false);
     }
 
     return (
         <div className="Products">
             <div className="Content">
                 <div className="Header">
-                    <img src={back} alt="back" onClick={navigateAdminDashboard} />
-                    <h1>Products</h1>
+                    <NavBar bg="white" style={{ marginLeft: "30px", marginRight: "30px", paddingTop: "30px" }}>
+                        <Container>
+                            <img src={back} alt="back" onClick={navigateAdminDashboard} />
+                            <NavBar.Brand>Products</NavBar.Brand>
+                            <Nav className="justify-content-end">
+                                <Button variant="outline-dark" onClick={() => addItem()}>Add Item</Button>
+                            </Nav>
+                        </Container>
+                    </NavBar>
                 </div>
-                {showSuccess ? (
+                {showDeleteSuccess ? (
                     <div className="Alert">
-                        <Alert variant="success" onClose={() => setShowSuccess(false)} dismissible>
+                        <Alert variant="success" onClose={() => setShowDeleteSuccess(false)} dismissible>
                             <Alert.Heading>{name} Deleted From Product List</Alert.Heading>
                         </Alert>
                     </div>
-                )
-                    : null}
-                <div className="container w-75">
+                ) : null}
+                {showAddSuccess ? (
+                    <div className="Alert">
+                        <Alert variant="success" onClose={() => setShowAddSuccess(false)} dismissible>
+                            <Alert.Heading>{name} Added To Product List</Alert.Heading>
+                        </Alert>
+                    </div>
+                ) : null}
+                {addForm ? (
+                    <div className="container w-75">
+                        <AddProduct
+                            addToList={() => addToList(name)}
+                            cancel={() => cancel()}
+                        />
+                    </div>
+                ) : (<div className="container w-75">
                     {products.map((name, index) => (
                         <Product
                             key={index}
@@ -72,18 +123,32 @@ function Products() {
                             removeFromList={() => removeFromList(index)}
                         />
                     ))}
-                </div>
+                </div>)}
             </div>
-            <Modal show={showPopup} onHide={handleClosePopup}>
+            <Modal show={showDeletePopup} onHide={handleCloseDeletePopup}>
                 <Modal.Header>
                     <Modal.Title>Are you sure you want to delete this item?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>{name}</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="outline-dark" onClick={handleClosePopup}>
+                    <Button variant="outline-dark" onClick={handleCloseDeletePopup}>
                         No
                     </Button>
-                    <Button variant="outline-dark" onClick={() => remove({ item })}>
+                    <Button variant="outline-dark" onClick={remove}>
+                        Yes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showAddPopup} onHide={handleCloseAddPopup}>
+                <Modal.Header>
+                    <Modal.Title>Are you sure you want to add this item?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>{name}</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="outline-dark" onClick={handleCloseAddPopup}>
+                        No
+                    </Button>
+                    <Button variant="outline-dark" onClick={add}>
                         Yes
                     </Button>
                 </Modal.Footer>
