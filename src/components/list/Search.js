@@ -1,4 +1,5 @@
-/* Code modified from the tutorial by Saleh Mubashar, from: https://dev.to/salehmubashar/search-bar-in-react-js-545l */
+/* Written by Song Pho
+Code modified from the tutorial by Saleh Mubashar, from: https://dev.to/salehmubashar/search-bar-in-react-js-545l */
 import * as React from 'react'
 import '../../App.css';
 import chocolate from "../../assets/chocolate.jpg"
