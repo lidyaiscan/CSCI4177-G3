@@ -2,22 +2,35 @@
 <!--- You may delete any comments in this sample README.md file. If needing to use as a .txt file then simply delete all comments, edit as needed, and save as a README.txt file --->
 
 # Lab / Assignment / Project Title
-CSCI 4177 Project Shopping Online
+CSCI 4177 Assignment 3 Project Shopping Online (front-end and back-end)
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
-* *Date Created*: 12 06 2022
-* *Last Modification Date*:  06 2022
+* *Date Created*: 10 07 2022
+* *Last Modification Date*:  07 2022
 * *Lab URL*: <groceryonline-csci4177-group3.herokuapp.com/>
-* *Git URL*: <https://git.cs.dal.ca/xinlong/csci4177.git>
+* *Git URL (group)*: <https://git.cs.dal.ca/lidya/csci-4177-group-3-project.git>
+* *git branch (myself)*: xinlong
 
 ## Authors: Liu xinlong (xn988864@dal.ca)
 
-In our project, I finished jobs below:
-(1) Authentication
+In our project, I am responsible for following features, and the front-end has been completed in the early stage:
+(1) Authentication (users)
 (2) Feedback and Reviews
 
+According to Assignment 3, I choose the user Authentication feature to implement front-end and back-end.
+This feature includs tasks below:
+*registeration
+*log in
+*log out
+*forgot password
+*change profile
+*change password
 
+The files created by myself:
+(1)front-end
+
+(2)back-end
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
 
