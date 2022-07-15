@@ -1,26 +1,26 @@
 ## README author
 * [Ngoc Song Ha Pho](songhapho@dal.ca) - *(Developer)*
 
-## Files authored
-# Frontend
+# Files authored
+## Frontend
 * Home.js
 * Search.js
 * Listing.js
 * nav.js
-# Backend
+## Backend
 * productModel.js
 * productRoute.js
 * server.js
-# Edited
+## Edited
 * App.css
 * App.js
 
-## References
-# Images
+# References
+## Images
 1. Chocolate image is used from the following web link: https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_%28blue_background%29.jpg/666px-Chocolate_%28blue_background%29.jpg?20180505175225
 Author: nagualdesign. Retrieved June 6, 2022, from Wikipedia Commons: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
 
-# Online tutorials
+## Online tutorials
 1. Tutorial Funda (Apr 9, 2021). How to Increment and Decrement Number Using React Hooks. Tutorial Funda. Accessed June 16, 2022, from: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
 - I used this tutorial to create the quantity selection in the product listing (Listing.js). I modified the code to better fit the project and created a class in CSS to manage both buttons and the value field.
 2. Marina Kim (Oct 25, 2020). Pass data between React UI and MongoDB Atlas | MERN Tutorial. YouTube. Accessed July 14, 2022, from: https://www.youtube.com/watch?v=nUbNn0voiBI&t=1382s
