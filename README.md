@@ -49,6 +49,6 @@ All images were taken from the below links
     Tomatoes: https://commons.wikimedia.org/wiki/File:Tomato_je.jpg
     Chocolate: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
 
-## Online tutorials
+## Online tutorial
 1. Tutorial Funda (Apr 9, 2021). How to Increment and Decrement Number Using React Hooks. Tutorial Funda. Accessed June 16, 2022, from: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
 - I used this tutorial to create the quantity selection in the product listing (Listing.js). I modified the code to better fit the project and created a class in CSS to manage both buttons and the value field.

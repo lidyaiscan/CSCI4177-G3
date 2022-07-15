@@ -1,4 +1,3 @@
-// Written by Song Pho 
 import * as React from 'react'
 import '../../App.css';
 import { useNavigate } from "react-router-dom";

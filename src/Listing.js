@@ -26,7 +26,7 @@ function ButtonIncrement(props) {
 
 function Display(props) {
     return (
-        <label className="counter" >{props.value}</label>
+        <label className="counter" >{props.message}</label>
     )
 }
 
@@ -54,7 +54,7 @@ function Listing() {
                     <p>⭐⭐⭐⭐ (41)</p>
                     <h3>Quantity</h3>
                     <ButtonDecrement onClickFunc={decrementCounter} />
-                    <Display value={counter} />
+                    <Display message={counter} />
                     <ButtonIncrement onClickFunc={incrementCounter} />
                     <Button className="cart">Add to cart</Button>
                 </div>
