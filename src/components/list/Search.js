@@ -20,7 +20,7 @@ function Search(props) {
         price: '',
         rating: '',
         ratingCount: '',
-        img: ''
+        image: ''
     }])
     React.useEffect(() => {
         fetch("/products").then(res => {
@@ -67,7 +67,7 @@ function Search(props) {
                     {products.map(product =>
                         <div className="listing">
                             <a href="/listing" onClick={navigateListing}>
-                                <img src={product.img} alt="" className="listing-photo" />
+                                <img src={product.image} alt="" className="listing-photo" />
                                 <p>{product.name}</p>
                                 <p>{product.measure}{product.unit}</p>
                                 <p>{product.rating} stars ({product.ratingCount})</p>
