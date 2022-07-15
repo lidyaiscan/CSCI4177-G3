@@ -26,8 +26,7 @@ body {
     font-size: 1em;
 }
 
-h1,
-h2 {
+h1 {
     color: #273c75;
     font: bold 2.5em/1em Futura, sans-serif;
     font-variant: small-caps;
@@ -35,7 +34,9 @@ h2 {
 }
 
 h2 {
-    font-size: 2em;
+    color: #273c75;
+    font: bold 1.5 Futura, sans-serif;
+    font-variant: small-caps;
 }
 
 .message {
@@ -101,6 +102,11 @@ textarea {
     text-decoration: none;
     display: inline-block;
     font-size: 1em;
+}
+
+div {
+    color: #273c75;
+    font: bold 1 Futura, sans-serif;
 }
 
 footer {
