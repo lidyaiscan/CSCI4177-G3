@@ -19,18 +19,44 @@ In our project, I am responsible for following features, and the front-end has b
 (2) Feedback and Reviews
 
 According to Assignment 3, I choose the user Authentication feature to implement front-end and back-end.
+[When submitting the demo, I will complete the interaction between tasks.]
+
 This feature includs tasks below:
 *registeration
 *log in
 *log out
-*forgot password
 *change profile
 *change password
 
 The files created by myself:
 (1)front-end
+   function             file path & name
+*registeration:         src/components/Reg/Reg.js
+*log in                 src/components/Login/Login.js
+*log out                src/components/Logout/Logout.js
+*show profile           src/components/Profile/Profile.js
+*update profile         src/components/Profile/Profile_Update.js
+*change password        this task include in "update profile"
+*set global variable    src/components/global/global.js
 
 (2)back-end
+   function             file path & name
+*http server            src/back_end_server/server.js
+*middleware,router      src/back_end_server/app.js
+ database connection
+*"User" schema,model    src/back_end_server/api/model/user.js
+*globle varaibel        src/back_end_server/api/global/global.js
+*registeration:         src/back_end_server/api/router/users.js
+(api:post http://localhost:8080/authen/add)
+*log in                 src/back_end_server/api/router/users.js
+(api:post http://localhost:8080/authen/login)
+*log out                src/back_end_server/api/router/users.js
+*update profile         src/back_end_server/api/router/users.js
+(api:get http://localhost:8080/authen/user/:id)
+(api:put http://localhost:8080/authen/update/id)
+*change password        this task include in "update profile"
+*delete user            src/back_end_server/api/router/users.js
+(api:delete http://localhost:8080/authen/delete/:id)
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
 

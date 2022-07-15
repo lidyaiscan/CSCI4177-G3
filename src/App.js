@@ -6,7 +6,9 @@ import Foot from "./components/foot/foot";
 import Home from "./components/Home/Home";
 import Register from "./components/Reg/Reg";
 import Profile from "./components/Reg/Reg";
+import UpdateProfile from "./components/Profile/Profile_Update";
 import Login from "./components/Login/Login";
+import Logout from "./components/Logout/Logout";
 import AdminLogin from "./components/AdminLogin/AdminLogin";
 import Contact from "./components/feedback/feedback";
 import Favourites from "./components/Favourites/Favourites";
@@ -26,7 +28,9 @@ function App() {
                     <Route path="" element={<Home />}></Route>
                     <Route path="/register" element={<Register />}></Route>
                     <Route path="/profile" element={<Profile />}></Route>
+                    <Route path="/updateprofile" element={<UpdateProfile />}></Route>
                     <Route path="/login" element={<Login />}></Route>
+                    <Route path="/logout" element={<Logout />}></Route>
                     <Route path="/adminLogin" element={<AdminLogin />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="/favourites" element={<Favourites />}></Route>

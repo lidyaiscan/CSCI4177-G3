@@ -1,42 +1,18 @@
 /**
  * CSCI 4177 Assignment 3
- * registration function
+ * update profile function
  * developed by xinlong
  */
-import "../../style.css";
-import React, { useState } from "react";
-import Profile from "../Profile/Profile";
-//import { Form } from "react-bootstrap";
-import "../global/global";
+import '../../style.css';
+import React, { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
-function addProfile(firstname, lastname, email, password, api_url) {
-    /*submit the regist information */
 
-    console.log(api_url);
 
-    const data = {
-        firstName: firstname,
-        lastName: lastname,
-        email: email,
-        password: password
-    };
+function Profile(props) {
 
-    const add_Profile = async () => {
-        await axios.post(api_url, data)
-            .then(res => {
-                console.log(res);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }
-
-    add_Profile();
-
-}
-
-function Reg_Form() {
+    const [profile, setProfile] = useState("");
     const [firstname, changeFirstName] = useState("");
     const [lastname, changeLastName] = useState("");
     const [email, changeEmail] = useState("");
@@ -44,6 +20,60 @@ function Reg_Form() {
     const [isvalidate, setValidate] = useState(false);
     //const [isExist, setExist] = useState(false);
     const [errorinfo, setErrorInfo] = useState([]);
+    const [updateresult, setResult] = useState(false);
+
+    //update profile
+    function updateProfile(firstname, lastname, email, password, api_url) {
+
+        console.log(api_url);
+
+        const data = {
+            firstName: firstname,
+            lastName: lastname,
+            email: email,
+            password: password
+        };
+
+        const update_Profile = async () => {
+            await axios.put(api_url, data)
+                .then(res => {
+                    console.log(res);
+                    setResult(true);
+                })
+                .catch(err => {
+                    console.log(err);
+                    setResult(false);
+                })
+        }
+
+        update_Profile();
+
+    }
+
+    //get user profile 
+    useEffect(() => {
+
+        const get_Profile = async () => {
+            let api_url = global.auth_api_server + "/user/" + sessionStorage.getItem("id");
+            await axios.get(api_url)
+                .then(res => {
+                    console.log(res);
+                    //setProfile(JSON.stringify(res.data.user));
+                    changeFirstName(res.data.user.firstName);
+                    changeLastName(res.data.user.lastName);
+                    changeEmail(res.data.user.email);
+
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
+
+        get_Profile();
+        //console.log(profile);
+        //alert(JSON.parse(profile).firstName);
+
+    }, [])
 
     /*check the validate */
     function CheckValidate(first_name, last_name, email_input, password_input) {
@@ -70,8 +100,8 @@ function Reg_Form() {
         }
         if (errs.length === 0) {
             /*clear the error messages */
-            let api_url = global.auth_api_server + "/add";
-            addProfile(first_name, last_name, email_input, password_input, api_url)
+            let api_url = global.auth_api_server + "/update/" + sessionStorage.getItem("id");
+            updateProfile(first_name, last_name, email_input, password_input, api_url)
             setValidate(true);
 
         } else {
@@ -81,11 +111,14 @@ function Reg_Form() {
         }
     }
 
-    return !isvalidate ? (
-        <React.Fragment>
+
+    if (!isvalidate) {
+
+        return (
+
             <div className="App">
                 <section id="description">
-                    <h1>Registration</h1>
+                    <h1>Your Profile</h1>
                 </section>
 
                 <div>
@@ -98,6 +131,7 @@ function Reg_Form() {
                         placeholder="First Name"
                         name="firstName"
                         id="firstName"
+                        value={firstname}
                         onChange={(event) => changeFirstName(event.target.value)}
                     ></input>
                     <br></br>
@@ -109,6 +143,7 @@ function Reg_Form() {
                         placeholder="Last Name"
                         name="lastName"
                         id="lastName"
+                        value={lastname}
                         onChange={(event) => changeLastName(event.target.value)}
                     ></input>
                     <br></br>
@@ -120,6 +155,7 @@ function Reg_Form() {
                         placeholder="Email"
                         name="email"
                         id="email"
+                        value={email}
                         onChange={(event) => changeEmail(event.target.value)}
                     ></input>
                     <br></br>
@@ -143,7 +179,7 @@ function Reg_Form() {
                         type="Submit"
                         id="enter"
                     >
-                        Register
+                        Update
                     </button>
 
                     <div>
@@ -153,10 +189,37 @@ function Reg_Form() {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
-    ) : (
-        <Profile in_firstname={firstname} in_lastname={lastname} in_email={email} />
-    );
+
+        )
+    }
+    else {
+        if (updateresult) {
+            return (
+                <div className="App">
+                    <section id="description">
+                        <h1>Update Profile</h1>
+                    </section>
+
+
+                    <div><h2>You have update your profile successfully.</h2></div>
+                    <div>You can update your <a href='/updateprofile'>profile</a> again or <a href='/'>visit HomePage</a></div>
+
+                </div>
+            );
+        } else {
+            return (
+                <div className="App">
+                    <section id="description">
+                        <h1>Update Profile</h1>
+                    </section>
+
+                    <div><h2>You Failed to modify profile</h2></div>
+                    <div>You can update your <a href='/updateprofile'>profile</a> again. </div>
+                </div>
+            );
+        }
+
+    }
 }
 
-export default Reg_Form;
+export default Profile;
