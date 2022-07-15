@@ -4,7 +4,7 @@
 
 * *Date Created*: June 12 2022
 * *Last Modification Date*: June 16 2022
-* *Heroku Link*: http://groceryonline-csci4177-group3.herokuapp.com/
+* *Heroku Link*: https://food4u-csci4177.herokuapp.com/
 * *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/main
 
 ## Authors
@@ -48,3 +48,7 @@ All images were taken from the below links
     Potatoes: https://www.publicdomainpictures.net/en/view-image.php?image=137873&picture=potato
     Tomatoes: https://commons.wikimedia.org/wiki/File:Tomato_je.jpg
     Chocolate: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
+
+## Online tutorial
+1. Tutorial Funda (Apr 9, 2021). How to Increment and Decrement Number Using React Hooks. Tutorial Funda. Accessed June 16, 2022, from: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
+- I used this tutorial to create the quantity selection in the product listing (Listing.js). I modified the code to better fit the project and created a class in CSS to manage both buttons and the value field.
