@@ -1,4 +1,4 @@
-/* Written by Song Pho */
+/* Written by Song Pho & Liam Brown */
 import "./App.css";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";

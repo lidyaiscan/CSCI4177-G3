@@ -1,3 +1,4 @@
+/* Written by Song Pho & Liam Brown */
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Product from "../Products/Product";
