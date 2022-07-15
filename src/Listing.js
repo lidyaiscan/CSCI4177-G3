@@ -1,3 +1,4 @@
+/* Written by Song Pho */
 import "./App.css";
 import chocolate from "./assets/chocolate.jpg";
 import React, { useState } from 'react';
