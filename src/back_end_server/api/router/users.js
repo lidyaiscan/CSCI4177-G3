@@ -293,7 +293,8 @@ userRouter.post("/login", cors(corsoptions), async (req, res) => {
      }
  })
  //implements API for DELETE call for deleting a user
- userRouter.delete('/delete/:id', async (req, res) => {
+ userRouter.options("/user/:id", cors(corsoptions))
+ userRouter.delete('/delete/:id',  cors(corsoptions), async (req, res) => {
     let userid = req.params.id;
 
     //if input is not objectid, return 400
