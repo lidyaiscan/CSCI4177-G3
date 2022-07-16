@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import ReactDOM from 'react-dom';
 import "../../style.css";
 import '../../App.css';
 import "../../styles/navbar.css";
@@ -6,8 +8,10 @@ import { Form } from "react-bootstrap";
 
 export default function Navigation() {
     const navigate = useNavigate();
+    //search function
+    const [search, setSearch] = useState('');
     const navigateSearch = () => {
-        navigate("/search");
+        navigate(`/search?search=${search}`);
     };
     return (
         <div>
@@ -16,7 +20,7 @@ export default function Navigation() {
                     <Form id="search">
                         <Form.Group controlId="searchBar">
                             <Form.Control
-                                id="search"
+                                name="search"
                                 type="text"
                                 placeholder="Search products"
                                 fullwidth

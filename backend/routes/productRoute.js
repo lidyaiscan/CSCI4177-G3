@@ -5,4 +5,13 @@ const Product = require("../models/productModel");
 router.route("/products").get(async (req, res) => {
     Product.find().then(foundProducts => res.json(foundProducts));
 })
+router.get("/search/:key", async (req, res) => {
+    let data = await Product.find(
+        {
+            "$or": [
+                { name: { $regex: req.params.key } }
+            ]
+        }
+    ).then(foundProducts => res.json(foundProducts));
+})
 module.exports = router;

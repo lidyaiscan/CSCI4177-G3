@@ -1,3 +1,4 @@
+import React from "react";
 import './Product.css';
 import apple from "../../assets/apple.jpg";
 import edit from "../../assets/edit.jpg";
