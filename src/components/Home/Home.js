@@ -15,11 +15,7 @@ export default function Home() {
 	useEffect(() => {
 		fetchProducts();
 	}, []);
-	const navigate = useNavigate();
 
-	const navigateListing = () => {
-		navigate("/listing");
-	};
 	return (
 		<div className="tile-listings col">
 			{products.map((product, index) => (
