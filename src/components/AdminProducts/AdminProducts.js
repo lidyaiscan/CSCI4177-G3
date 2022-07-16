@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Product from "./Product";
 import AddProduct from "./AddProduct";
 //import EditProduct from './EditProduct';
-import NavBar from "react-bootstrap/NavBar";
+import NavBar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
