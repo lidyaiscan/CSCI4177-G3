@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Product from './Product';
 import AddProduct from './AddProduct';
-import EditProduct from './EditProduct';
+//import EditProduct from './EditProduct';
 import NavBar from 'react-bootstrap/NavBar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -75,7 +75,7 @@ function Products() {
                     />
                 </div>
             )
-        } else if (editForm) {
+        } /*else if (editForm) {
             return (
                 <div className="container w-75">
                     <EditProduct
@@ -85,7 +85,7 @@ function Products() {
                     />
                 </div>
             )
-        } else {
+    }*/ else {
             return (
                 <div className="container w-75">
                     {products.map(product => (
