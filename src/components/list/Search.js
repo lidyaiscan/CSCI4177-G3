@@ -44,8 +44,12 @@ function Search(props) {
         ratingCount: '',
         image: ''
     }])
+    let search = window.location.search;
+    let query = new URLSearchParams(search);
+    let searchQuery = query.get("search");
+    console.log(searchQuery);
     React.useEffect(() => {
-        fetch("/products").then(res => {
+        fetch("/search/:" + { searchQuery }).then(res => {
             if (res.ok) {
                 return res.json()
             }
@@ -53,14 +57,7 @@ function Search(props) {
     })
     return (
         <div>
-            <Form>
-                <Form.Group controlId="searchBar">
-                    <Form.Control id="search" type="text" placeholder="Search products" fullwidth />
-                    <button type="Submit" value="Submit" className='Submit'>Submit</button>
-                </Form.Group>
-            </Form>
-            <h2>Showing 3 results for chocolate</h2>
-            <h3>Applied filters:</h3>
+            <h2>Showing search results</h2>
             <div className="searchResults">
                 <div>
                     <Filter title="Category">

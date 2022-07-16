@@ -1,3 +1,4 @@
+import React from "react";
 import './Product.css';
 import { useState, useEffect } from 'react';
 import edit from "../../assets/edit.jpg";
