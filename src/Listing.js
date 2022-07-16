@@ -53,7 +53,10 @@ function Listing() {
 					{favorites.length > 0 &&
 					favorites &&
 					favorites !== undefined &&
-					favorites.find((pName) => pName === product.name) ? (
+					favorites.find(
+						(pName) =>
+							pName.toLocaleLowerCase() === product.name.toLocaleLowerCase()
+					) ? (
 						<Button
 							className="btn btn-secondary"
 							onClick={(e) => {

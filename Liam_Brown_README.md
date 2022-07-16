@@ -6,7 +6,7 @@ https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/liam
 
 ## Deployed Link
 
-http://groceryonline-csci4177-group3.herokuapp.com/
+https://food4u-csci4177.herokuapp.com/
 
 ## Feature Implemented
 
