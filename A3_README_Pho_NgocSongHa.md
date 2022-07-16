@@ -1,6 +1,11 @@
 ## README author
 * [Ngoc Song Ha Pho](songhapho@dal.ca) - *(Developer)*
+# Feature developed
+I was responsible for the search and filters feature, which would allow users to search for specific products and filter those that meet their specific requirements (e.g., price, rating, brand, etc.) The idea was to develop the frontend with React JS, the backend with NodeJS and Express, and data stored on MongoDB. The backend would retrieve data from MongoDB and pass into the frontend to be displayed (more details about the feature flow can be found in my A2 submission). In that way, the search bar would take in the user's query and pass it to the backend, where it would be used to find product names that contain the phrase. The filters are expected to work in a similar manner but for different fields (brand, rating, price).
 
+Current issue: The API endpoints work properly; however, I could not extract the search query from the URL to retrieve products of which names match the query. 
+
+Below is a list of the files I have written and contributed to in this project.
 # Files authored
 ## Frontend
 * Home.js

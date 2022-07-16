@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-import { useState, useEffect } from 'react';
->>>>>>> main
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Product from './Product';
 import AddProduct from './AddProduct';

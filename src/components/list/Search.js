@@ -1,3 +1,5 @@
+/* Written by Song Pho */
+/* TODO: get the search param and pass it into the API */
 import * as React from 'react'
 import '../../App.css';
 import { useNavigate } from "react-router-dom";
@@ -44,6 +46,7 @@ function Search(props) {
         ratingCount: '',
         image: ''
     }])
+    //Search feature - currently not working properly
     let search = window.location.search;
     let query = new URLSearchParams(search);
     let searchQuery = query.get("search");
