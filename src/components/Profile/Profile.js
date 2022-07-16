@@ -1,3 +1,8 @@
+/**
+ * CSCI 4177 Assignment 3
+ * show profile function
+ * developed by xinlong
+ */
 import '../../style.css';
 import React from "react";
 import { Link } from 'react-router-dom';

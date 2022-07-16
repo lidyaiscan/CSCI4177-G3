@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> main
 import { useNavigate } from 'react-router-dom';
 import Product from './Product';
 import AddProduct from './AddProduct';
+import EditProduct from './EditProduct';
 import NavBar from 'react-bootstrap/NavBar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -12,71 +17,161 @@ import back from '../../assets/back.jpg';
 
 function Products() {
 
-    const [products, setProducts] = useState([
-        "Honey Crisp Apples",
-        "Gala Apples",
-        "Granny Smith Apples",
-        "McIntosh Apples",
-        "Blueberries",
-        "Strawberries",
-    ]);
-
     const navigateAdminDashboard = () => {
         navigate('/adminDashboard')
     }
 
     const navigate = useNavigate();
 
-    const [item, setItem] = useState();
-    const [name, setName] = useState();
+    //retrieve product data from MongoDB
+    const [products, setProducts] = useState([{
+        pId: '',
+        name: '',
+        description: '',
+        measure: '',
+        unit: '',
+        price: '',
+        stock: '',
+        rating: '',
+        ratingCount: '',
+        image: ''
+    }])
 
-    const [addForm, setAddForm] = useState(false);
+    useEffect(() => {
+        fetch("/adminProducts").then(res => {
+            console.log(res);
+            if (res.ok) {
+                return res.json()
+            }
+        }).then(jsonRes => setProducts(jsonRes));
+    })
+
+    const [id, setId] = useState();
+    const [name, setName] = useState();
+    const [description, setDescription] = useState();
+    const [price, setPrice] = useState();
+    const [stock, setStock] = useState();
+    const [image, setImage] = useState();
+
+    var newId = 4;
 
     const [showDeletePopup, setShowDeletePopup] = useState(false);
     const handleCloseDeletePopup = () => setShowDeletePopup(false);
-
     const [showDeleteSuccess, setShowDeleteSuccess] = useState(false);
 
+    const [editForm, setEditForm] = useState(false);
+    const [showEditPopup, setShowEditPopup] = useState(false);
+    const handleCloseEditPopup = () => setShowEditPopup(false);
+    const [showEditSuccess, setShowEditSuccess] = useState(false);
+
+    const [addForm, setAddForm] = useState(false);
     const [showAddPopup, setShowAddPopup] = useState(false);
     const handleCloseAddPopup = () => setShowAddPopup(false);
-
     const [showAddSuccess, setShowAddSuccess] = useState(false);
+
+    function display() {
+        if (addForm) {
+            return (
+                <div className="container w-75">
+                    <AddProduct
+                        addToList={() => addToList()}
+                        cancel={() => cancel()}
+                    />
+                </div>
+            )
+        } else if (editForm) {
+            return (
+                <div className="container w-75">
+                    <EditProduct
+                        id={id}
+                        saveToList={() => saveToList(name)}
+                        cancel={() => cancel()}
+                    />
+                </div>
+            )
+        } else {
+            return (
+                <div className="container w-75">
+                    {products.map(product => (
+                        <Product
+                            name={product.name}
+                            id={product.pId}
+                            editItem={() => editItem(id)}
+                            removeFromList={() => removeFromList(id)}
+                        />
+                    ))}
+                </div>
+            )
+        }
+    }
+
+    function removeFromList(id) {
+        setId(id);
+        setShowDeletePopup(true);
+    }
+
+    function remove() {
+        products.deleteOne({ id: id });
+
+        setShowDeletePopup(false);
+        setShowDeleteSuccess(true);
+    }
+
+    function editItem(id) {
+        setId(id);
+        setEditForm(true);
+    }
+
+    function saveToList(name, description, price, stock) {
+        setName(name);
+        setDescription(description);
+        setPrice(price);
+        setStock(stock);
+        setShowEditPopup(true);
+    }
+
+    function save() {
+        products.findOneAndUpdate({ pId: id }, { name: name, description: description, price: price, stock: stock });
+
+        setShowEditPopup(false);
+        setShowEditSuccess(true);
+        setEditForm(false);
+    }
 
     function addItem() {
         setAddForm(true);
     }
 
-    function removeFromList(index) {
-        setItem(index);
-        var copy = [...products];
-        setName(copy[index]);
-        setShowDeletePopup(true);
-    }
-
-    function addToList(name) {
+    function addToList(name, description, price, stock, image) {
         setName(name);
+        setDescription(description);
+        setPrice(price);
+        setStock(stock);
+        setImage(image);
         setShowAddPopup(true);
     }
 
-    function remove() {
-        var copy = [...products];
-        copy.splice(item, 1);
-        setShowDeletePopup(false);
-        setShowDeleteSuccess(true);
-        setProducts(copy);
-    }
-
     function add() {
-        var copy = [...products];
-        copy.push(name);
+        const id = newId.toString();
+        const newProduct = new Product({
+            pId: id,
+            name: name,
+            description: description,
+            price: price,
+            stock: stock,
+            image: image
+        });
+        newProduct.save();
+
+        newId++;
         setShowAddPopup(false);
         setShowAddSuccess(true);
         setAddForm(false);
-        setProducts(copy);
     }
 
     function cancel() {
         setAddForm(false);
+        setEditForm(false);
     }
 
     return (
@@ -100,6 +195,13 @@ function Products() {
                         </Alert>
                     </div>
                 ) : null}
+                {showEditSuccess ? (
+                    <div className="Alert">
+                        <Alert variant="success" onClose={() => setShowEditSuccess(false)} dismissible>
+                            <Alert.Heading>{name} Was Edited</Alert.Heading>
+                        </Alert>
+                    </div>
+                ) : null}
                 {showAddSuccess ? (
                     <div className="Alert">
                         <Alert variant="success" onClose={() => setShowAddSuccess(false)} dismissible>
@@ -107,23 +209,7 @@ function Products() {
                         </Alert>
                     </div>
                 ) : null}
-                {addForm ? (
-                    <div className="container w-75">
-                        <AddProduct
-                            addToList={() => addToList(name)}
-                            cancel={() => cancel()}
-                        />
-                    </div>
-                ) : (<div className="container w-75">
-                    {products.map((name, index) => (
-                        <Product
-                            key={index}
-                            product={name}
-                            index={index}
-                            removeFromList={() => removeFromList(index)}
-                        />
-                    ))}
-                </div>)}
+                {display()}
             </div>
             <Modal show={showDeletePopup} onHide={handleCloseDeletePopup}>
                 <Modal.Header>
@@ -135,6 +221,20 @@ function Products() {
                         No
                     </Button>
                     <Button variant="outline-dark" onClick={remove}>
+                        Yes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showEditPopup} onHide={handleCloseEditPopup}>
+                <Modal.Header>
+                    <Modal.Title>Are you sure you want to edit this item?</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>{name}</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="outline-dark" onClick={handleCloseEditPopup}>
+                        No
+                    </Button>
+                    <Button variant="outline-dark" onClick={save}>
                         Yes
                     </Button>
                 </Modal.Footer>

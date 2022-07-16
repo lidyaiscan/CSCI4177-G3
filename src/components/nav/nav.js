@@ -37,6 +37,9 @@ export default function Navigation() {
                     </Form>
                 </div>
                 <div className="top-links">
+                    <a href="/register">Sign up</a>
+                </div>
+                <div className="top-links">
                     <a href="/login">Log in</a>
                 </div>
                 <div className="top-links">

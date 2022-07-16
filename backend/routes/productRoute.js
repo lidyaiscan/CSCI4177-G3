@@ -14,4 +14,8 @@ router.get("/search/:key", async (req, res) => {
         }
     ).then(foundProducts => res.json(foundProducts));
 })
+
+router.route("/adminProducts").get(async (req, res) => {
+    Product.find().then(foundProducts => res.json(foundProducts));
+})
 module.exports = router;
