@@ -1,3 +1,10 @@
+## Project repository
+* Project: https://git.cs.dal.ca/lidya/csci-4177-group-3-project.git
+* Individual branch: https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/song-a3
+
+## Heroku link
+https://food4u-csci4177.herokuapp.com/
+
 ## README author
 * [Ngoc Song Ha Pho](songhapho@dal.ca) - *(Developer)*
 # Feature developed
