@@ -50,6 +50,10 @@
     background-color: white;
 }
 
+.tile-listings {
+    margin: 0%;
+}
+
 .tile-listings div {
     display: inline-block;
     margin: 1% 5%;
@@ -102,4 +106,34 @@
 
 .listingDescription p {
     font-size: 1.2rem;
+}
+
+.filter {
+    font-size: 2rem;
+}
+
+.searchResults {
+    display: flex;
+}
+
+.collapsible {
+    min-width: 200px;
+}
+
+.collapsible .content {
+    padding: 3px;
+    background-color: #f2f5f2;
+    font-size: 14px;
+}
+
+.collapsible .header {
+    background-color: #c8c8c8;
+    padding: 6px;
+    display: flex;
+    border-bottom: 2px solid #c8c8c8;
+}
+
+.preferences label {
+    display: block;
+    padding-bottom: 4px;
 }

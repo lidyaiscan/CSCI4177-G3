@@ -1,3 +1,5 @@
+import React from "react";
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -7,8 +9,18 @@ function AdminLogin() {
 
     const navigate = useNavigate();
 
-    const navigateAdminDashboard = () => {
-        navigate('/adminDashboard')
+    const [username, changeUsername] = useState("");
+    const [password, changePassword] = useState("");
+    const [errorinfo, setErrorInfo] = useState([]);
+
+    function validate(username, password) {
+        if (username === "admin" && password === "admin") {
+            navigate('/adminDashboard');
+        } else {
+            const errors = [];
+            errors.push("Username or password are incorrect");
+            setErrorInfo(errors);
+        }
     }
 
     return (
@@ -20,13 +32,18 @@ function AdminLogin() {
                 <Modal.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicUsername">
-                            <Form.Control type="username" placeholder="Username" />
+                            <Form.Control type="username" placeholder="Username" onChange={(event) => changeUsername(event.target.value)} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control type="password" placeholder="Password" onChange={(event) => changePassword(event.target.value)} />
                         </Form.Group>
                         <div className="d-grid gap-2">
-                            <Button variant="dark" onClick={navigateAdminDashboard}>LOG IN</Button>
+                            <Button variant="dark" onClick={() => validate(username, password)}>LOG IN</Button>
+                        </div>
+                        <div className="d-grid gap-2">
+                            {errorinfo.map((item, index) => (
+                                <p key={index}>{item}</p>
+                            ))}
                         </div>
                     </Form>
                 </Modal.Body>

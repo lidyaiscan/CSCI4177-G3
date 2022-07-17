@@ -9,7 +9,7 @@ https://food4u-csci4177.herokuapp.com/
 * [Liu Xinlong](xn988864@dal.ca) - *(Developer)*
 # Feature developed
 In our project, I am responsible for following features, and the front-end has been completed in the early stage:
-1. Authentication (users)
+1. Authentication (for users)
 2. Feedback and Reviews
 
 According to Assignment 3, I choose the user Authentication feature to implement front-end and back-end.
