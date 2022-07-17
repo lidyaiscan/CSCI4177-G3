@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 //MongoDB connection
-mongoose.connect("mongodb+srv://group3:csci4177@cluster0.s8dqb.mongodb.net/a3-csci4177?retryWrites=true&w=majority', { useNewUrlParser: true } ");
+mongoose.connect("mongodb+srv://group3:csci4177@cluster0.s8dqb.mongodb.net/a3-csci4177");
 const connection = mongoose.connection;
 connection.once('open', function () {
     console.log('Succesfully connected to MongoDB!');
