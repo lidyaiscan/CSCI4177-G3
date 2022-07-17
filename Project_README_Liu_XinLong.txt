@@ -8,7 +8,7 @@ CSCI 4177 Assignment 3 Project Shopping Online (front-end and back-end)
 
 * *Date Created*: 10 07 2022
 * *Last Modification Date*:  07 2022
-* *Lab URL*: <groceryonline-csci4177-group3.herokuapp.com/>
+* *Lab URL*: <https://food4u-csci4177.herokuapp.com/>
 * *Git URL (group)*: <https://git.cs.dal.ca/lidya/csci-4177-group-3-project.git>
 * *git branch (myself)*: xinlong
 
@@ -47,16 +47,16 @@ The files created by myself:
 *"User" schema,model    src/back_end_server/api/model/user.js
 *globle varaibel        src/back_end_server/api/global/global.js
 *registeration:         src/back_end_server/api/router/users.js
-(api:post http://localhost:8080/authen/add)
+(api:post https://deploy_ip:deploy_port/authen/add)
 *log in                 src/back_end_server/api/router/users.js
-(api:post http://localhost:8080/authen/login)
+(api:post https://deploy_ip:deploy_port/authen/login)
 *log out                src/back_end_server/api/router/users.js
 *update profile         src/back_end_server/api/router/users.js
-(api:get http://localhost:8080/authen/user/:id)
-(api:put http://localhost:8080/authen/update/id)
+(api:get https://deploy_ip:deploy_port/authen/user/:id)
+(api:put https://deploy_ip:deploy_port/authen/update/id)
 *change password        this task include in "update profile"
 *delete user            src/back_end_server/api/router/users.js
-(api:delete http://localhost:8080/authen/delete/:id)
+(api:delete https://deploy_ip:deploy_port/authen/delete/:id)
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment, you may simply include your name and email address. Otherwise list the members of your group.
 
