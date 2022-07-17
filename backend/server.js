@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
+//added by xinlong for Authen feature!
+const userRouter = require("./api/router/users");
+const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +18,9 @@ connection.once('open', function () {
 
 //Routes
 app.use("/", require("./routes/productRoute"));
+//Router for Authen feature added by Xinlong !!
+app.use("/authen", userRouter);
 
-app.listen(4000, function () {
+app.listen(port, function () {
     console.log("Server is running on port 4000");
 })
