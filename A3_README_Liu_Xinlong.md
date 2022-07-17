@@ -24,14 +24,15 @@ According to Assignment 3, I choose the user Authentication feature to implement
 
 # The files created by myself:
 ## (1)front-end
-*   function                  file path & name
-* registeration:              src/components/Reg/Reg.js
-* log in                      src/components/Login/Login.js
-* log out                     src/components/Logout/Logout.js
-* show profile                src/components/Profile/Profile.js
-* update profile              src/components/Profile/Profile_Update.js
-* change password             this task include in "update profile"
-* set global variable         src/components/global/global.js
+|function                     |file path & name                         |
+| --------------------------- | --------------------------------------- |
+| registeration:              | src/components/Reg/Reg.js               |
+| log in :                    | src/components/Login/Login.js           |
+* log out :                    src/components/Logout/Logout.js
+* show profile :               src/components/Profile/Profile.js
+* update profile :             src/components/Profile/Profile_Update.js
+* change password :            this task include in "update profile"
+* set global variable :        src/components/global/global.js
 
 ## (2)back-end
 *   function                  file path & name
