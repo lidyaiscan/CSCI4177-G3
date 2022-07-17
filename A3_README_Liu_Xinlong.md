@@ -15,15 +15,15 @@ In our project, I am responsible for following features, and the front-end has b
 According to Assignment 3, I choose the user Authentication feature to implement front-end and back-end.
 [When submitting the demo, I will complete the interaction between tasks.]
 
-This feature includs tasks below:
+# This feature includs tasks below:
 *registeration
 *log in
 *log out
 *change profile
 *change password
 
-The files created by myself:
-(1)front-end
+# The files created by myself:
+## (1)front-end
    function             file path & name
 *registeration:         src/components/Reg/Reg.js
 *log in                 src/components/Login/Login.js
@@ -33,7 +33,7 @@ The files created by myself:
 *change password        this task include in "update profile"
 *set global variable    src/components/global/global.js
 
-(2)back-end
+## (2)back-end
    function             file path & name
 *http server            src/back_end_server/server.js
 *middleware,router      src/back_end_server/app.js
