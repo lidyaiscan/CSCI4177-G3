@@ -94,6 +94,8 @@
         let saltVal = await bcrypt.genSalt(10);
         let cryptPass = await bcrypt.hash(req.body.password, saltVal);
 
+        console.log("befor add");
+
         const user = new User({
             id: new mongoose.Types.ObjectId(),
             firstName: req.body.firstName,
@@ -116,6 +118,7 @@
             });
 
         } catch(error) {
+            console.log(error);
             return res.status(500).json({
                 message : "Internal Server Error",
                 success : false
