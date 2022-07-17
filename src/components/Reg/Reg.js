@@ -126,7 +126,7 @@ function Reg_Form() {
                     <label>Password</label>
                     <span>
                         * Include at least one number, one uppercase letter, one lowercase
-                        letter, and one special character.
+                        letter, and one special character, length at least 8.
                     </span>
                     <br></br>
                     <input
