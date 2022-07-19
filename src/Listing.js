@@ -72,7 +72,9 @@ function Listing() {
     return (
         <div>
             <div>
-                <p>Products/Category/Sub category/Product title</p>
+                {products.map((productSelected) => (
+                    <p>Products/Category/Sub category/{productSelected.name}</p>
+                ))}
             </div>
             <div id="product-detail">
                 <div className="listingDetailImg col-md-3">
@@ -124,13 +126,12 @@ function Listing() {
                     ))}
                     {products.map((productSelected) => (
                         <p>
-                            {productSelected.measure}
-                            {productSelected.unit}
+                            {productSelected.measure} {productSelected.unit}
                         </p>
                     ))}
                     {products.map((productSelected) => (
                         <p>
-                            {productSelected.rating} ({productSelected.ratingCount})
+                            {productSelected.rating}⭐ ({productSelected.ratingCount})
                         </p>
                     ))}
                     <h3>Quantity</h3>
