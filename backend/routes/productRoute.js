@@ -16,7 +16,7 @@ router.get("/search/:key", async (req, res) => {
     ).then(foundProducts => res.json(foundProducts));
 })
 router.get("/product/:id", async (req, res) => {
-    Product.findOne({ 'pId': req.params.id }).then(foundProducts => res.json(foundProducts));
+    Product.find({ 'pId': req.params.id }).then(foundProducts => res.json(foundProducts));
 })
 
 router.route("/adminProducts").get(async (req, res) => {

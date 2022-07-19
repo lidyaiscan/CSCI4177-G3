@@ -1,5 +1,4 @@
 /* Written by Song Pho */
-/* TODO: get the search param and pass it into the API */
 import * as React from "react";
 import "../../App.css";
 import { useNavigate } from "react-router-dom";
@@ -60,7 +59,6 @@ function Search(props) {
     React.useEffect(() => {
         fetchProducts();
     }, []);
-
 
     return (
         <div>

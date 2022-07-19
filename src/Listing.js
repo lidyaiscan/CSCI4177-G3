@@ -28,16 +28,17 @@ function Display(props) {
 function Listing() {
     const [counter, setCounter] = useState(1);
     const incrementCounter = () => setCounter(counter + 1);
+    let decrementCounter = () => setCounter(counter - 1);
+    if (counter <= 1) {
+        decrementCounter = () => setCounter(1);
+    }
     const product = useLocation().state;
     const [favorites, setFavorites] = useState(
         localStorage.getItem("favorites")
             ? Array.from(localStorage.getItem("favorites").split(","))
             : []
     );
-    let decrementCounter = () => setCounter(counter - 1);
-    if (counter <= 1) {
-        decrementCounter = () => setCounter(1);
-    }
+
     //retrieve product data from MongoDB
     const [products, setProducts] = React.useState([
         {
@@ -52,9 +53,12 @@ function Listing() {
             brand: ""
         },
     ]);
+
+    //Search feature - currently not working properly
     let search = window.location.search;
     let query = new URLSearchParams(search);
     let idQuery = query.get("id");
+    console.log(idQuery);
     const fetchProducts = async () => {
         const prods = await (
             await fetch(`/product/${idQuery}`)
@@ -72,10 +76,10 @@ function Listing() {
             </div>
             <div id="product-detail">
                 <div className="listingDetailImg col-md-3">
-                    {products.map((product) => (
+                    {products.map((productSelected) => (
                         <img
-                            src={product.img}
-                            alt={product.name}
+                            src={productSelected.image}
+                            alt={productSelected.name}
                             className="listing-photo-large"
                         />
                     ))}
@@ -115,18 +119,18 @@ function Listing() {
                     )}
                 </div>
                 <div className="listingDetail">
-                    {products.map((product) => (
-                        <h2>{product.name}</h2>
+                    {products.map((productSelected) => (
+                        <h2>{productSelected.name}</h2>
                     ))}
-                    {products.map((product) => (
+                    {products.map((productSelected) => (
                         <p>
-                            {product.measure}
-                            {product.unit}
+                            {productSelected.measure}
+                            {productSelected.unit}
                         </p>
                     ))}
-                    {products.map((product) => (
+                    {products.map((productSelected) => (
                         <p>
-                            {product.rating} ({product.ratingCount})
+                            {productSelected.rating} ({productSelected.ratingCount})
                         </p>
                     ))}
                     <h3>Quantity</h3>
@@ -138,8 +142,8 @@ function Listing() {
             </div>
             <div className="listingDescription">
                 <h3>Product description</h3>
-                {products.map((product) => (
-                    <p>{product.description}</p>
+                {products.map((productSelected) => (
+                    <p>{productSelected.description}</p>
                 ))}
             </div>
         </div>
