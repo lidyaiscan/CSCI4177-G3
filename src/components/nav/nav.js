@@ -12,7 +12,7 @@ export default function Navigation() {
     //search function
     const [search, setSearch] = useState('');
     const navigateSearch = () => {
-        navigate(`/search?searchQuery=${search}`);
+        navigate(`/search?${search}`);
     };
     return (
         <div>

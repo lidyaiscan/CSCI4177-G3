@@ -30,12 +30,13 @@ function Search(props) {
     const navigate = useNavigate();
 
     const navigateListing = () => {
-        navigate("/listing");
+        navigate('/listing?id=');
     };
 
     //retrieve product data from MongoDB
     const [products, setProducts] = React.useState([
         {
+            pId: "",
             name: "",
             measure: "",
             unit: "",
@@ -59,6 +60,7 @@ function Search(props) {
     React.useEffect(() => {
         fetchProducts();
     }, []);
+
 
     return (
         <div>
@@ -116,7 +118,7 @@ function Search(props) {
                 <div className="tile-listings col-md-9">
                     {products.map((product) => (
                         <div className="listing">
-                            <a href="/listing" onClick={navigateListing}>
+                            <a href={"/listing?id=" + product.pId} onClick={navigateListing}>
                                 <img src={product.image} alt="" className="listing-photo" />
                                 <p>{product.name}</p>
                                 <p>
