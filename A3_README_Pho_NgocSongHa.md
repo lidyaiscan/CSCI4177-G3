@@ -31,6 +31,8 @@ Below is a list of the files I have written and contributed to in this project.
 ## Images
 1. Chocolate image is used from the following web link: https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chocolate_%28blue_background%29.jpg/666px-Chocolate_%28blue_background%29.jpg?20180505175225
 Author: nagualdesign. Retrieved June 6, 2022, from Wikipedia Commons: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
+2. Candy image is used from the following web link: https://cdn.stocksnap.io/img-thumbs/960w/heart-candy_ROSWFAPM8F.jpg
+Author: Marco Mama. Retrieved July 18, 2022, from Stocksnap.io: https://stocksnap.io/photo/heart-candy-ROSWFAPM8F
 
 ## Online tutorials
 1. Tutorial Funda (Apr 9, 2021). How to Increment and Decrement Number Using React Hooks. Tutorial Funda. Accessed June 16, 2022, from: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
