@@ -61,7 +61,7 @@ function Listing() {
     console.log(idQuery);
     const fetchProducts = async () => {
         const prods = await (
-            await fetch(`/product/${idQuery}`)
+            await fetch(`https://food4u-backend.herokuapp.com/product/${idQuery}`)
         ).json();
         setProducts(prods);
     };
