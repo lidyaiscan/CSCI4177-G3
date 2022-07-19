@@ -62,7 +62,7 @@ function Search(props) {
 
     return (
         <div>
-            <h2>Showing search results</h2>
+            <h2>Showing search results for "{searchQuery}"</h2>
             <div className="searchResults">
                 <div>
                     <Filter title="Category">
