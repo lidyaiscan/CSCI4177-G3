@@ -1,3 +1,4 @@
+/* Written by Song Pho */
 import React, { useState } from "react";
 import ReactDOM from 'react-dom';
 import "../../style.css";
@@ -11,7 +12,7 @@ export default function Navigation() {
     //search function
     const [search, setSearch] = useState('');
     const navigateSearch = () => {
-        navigate(`/search?search=${search}`);
+        navigate(`/search?searchQuery=${search}`);
     };
     return (
         <div>
@@ -20,7 +21,7 @@ export default function Navigation() {
                     <Form id="search">
                         <Form.Group controlId="searchBar">
                             <Form.Control
-                                name="search"
+                                name="searchQuery"
                                 type="text"
                                 placeholder="Search products"
                                 fullwidth
