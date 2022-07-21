@@ -3,9 +3,9 @@
 # CSCI 4177 Group 3 Project
 
 * *Date Created*: June 12 2022
-* *Last Modification Date*: June 16 2022
+* *Last Modification Date*: July 21 2022
 * *Heroku Link*: https://food4u-csci4177.herokuapp.com/
-* *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project/-/tree/main
+* *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project.git
 
 ## Authors
 
@@ -48,7 +48,13 @@ All images were taken from the below links
     Potatoes: https://www.publicdomainpictures.net/en/view-image.php?image=137873&picture=potato
     Tomatoes: https://commons.wikimedia.org/wiki/File:Tomato_je.jpg
     Chocolate: https://commons.wikimedia.org/wiki/File:Chocolate_%28blue_background%29.jpg
+    Candy: https://cdn.stocksnap.io/img-thumbs/960w/heart-candy_ROSWFAPM8F.jpg
 
 ## Online tutorial
 1. Tutorial Funda (Apr 9, 2021). How to Increment and Decrement Number Using React Hooks. Tutorial Funda. Accessed June 16, 2022, from: https://www.tutorialfunda.com/reactjs/increment-decrement-number-using-react-hooks-counter/
-- I used this tutorial to create the quantity selection in the product listing (Listing.js). I modified the code to better fit the project and created a class in CSS to manage both buttons and the value field.
+- Song used this tutorial to create the quantity selection in the product listing (Listing.js). She modified the code to better fit the project and created a class in CSS to manage both buttons and the value field.
+2. Marina Kim (Oct 25, 2020). Pass data between React UI and MongoDB Atlas | MERN Tutorial. YouTube. Accessed July 14, 2022, from: https://www.youtube.com/watch?v=nUbNn0voiBI&t=1382s
+- Song had some issues connecting the frontend and backend, so she used this tutorial to learn how to connect the backend (created with NodeJS to retrieve data from MongoDB) with the React frontend to display such data. She modified the code to match my database configuration and needs to search/filter data. 
+3. Shalitha Suranga (Dec 20, 2021). Create collapsible React components with react-collapsed. LogRocket. Accessed July 14, 2022, from: https://blog.logrocket.com/create-collapsible-react-components-react-collapsed/
+- Song used this tutorial to create the expandable and collapsible sections for the search filters (Search.js). She modified the code to match the styles and behaviours established in Assignment 1, as well as fixed the auto-resizing issue (i.e., header size is auto-resized when the content is revealed. They should both have similar width now.)
+

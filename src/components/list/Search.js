@@ -62,7 +62,7 @@ function Search(props) {
 
     return (
         <div>
-            <h2>Showing search results</h2>
+            <h2>Showing search results for "{searchQuery}"</h2>
             <div className="searchResults">
                 <div>
                     <Filter title="Category">
@@ -123,7 +123,7 @@ function Search(props) {
                                     {product.measure} {product.unit}
                                 </p>
                                 <p>
-                                    {product.rating} stars ({product.ratingCount})
+                                    {product.rating}⭐ ({product.ratingCount})
                                 </p>
                                 <p>${product.price}</p>
                             </a>
