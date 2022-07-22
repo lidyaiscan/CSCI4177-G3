@@ -1,4 +1,4 @@
-/* Written by Song Pho */
+/* Written by Song Pho and Lidya Iscan-Insense */
 const express = require("express");
 const router = express.Router();
 const Product = require("../models/productModel");
