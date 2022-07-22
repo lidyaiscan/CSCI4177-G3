@@ -54,9 +54,8 @@ function Listing() {
         },
     ]);
 
-    //Search feature - currently not working properly
-    let search = window.location.search;
-    let query = new URLSearchParams(search);
+    let productIdParam = window.location.search;
+    let query = new URLSearchParams(productIdParam);
     let idQuery = query.get("id");
     console.log(idQuery);
     const fetchProducts = async () => {
@@ -90,13 +89,13 @@ function Listing() {
                         favorites !== undefined &&
                         favorites.find(
                             (pName) =>
-                                pName.toLocaleLowerCase() === product.name.toLocaleLowerCase()
+                                pName.toLocaleLowerCase() === products.map(productSelected => productSelected.name.toLocaleLowerCase())
                         ) ? (
                         <Button
                             className="btn btn-secondary"
                             onClick={(e) => {
                                 var copy = [...favorites];
-                                copy.splice(copy.indexOf(`${product.name}`), 1);
+                                copy.splice(copy.indexOf(`${products.map(productSelected => productSelected.name)}`), 1);
                                 localStorage.setItem("favorites", copy);
                                 setFavorites(localStorage.getItem("favorites").split(","));
                             }}
@@ -107,10 +106,10 @@ function Listing() {
                         <Button
                             className="cart"
                             onClick={() => {
-                                if (!favorites.find((pName) => pName === product.name)) {
+                                if (!favorites.find((pName) => pName === products.map(productSelected => productSelected.name))) {
                                     localStorage.setItem(
                                         "favorites",
-                                        favorites.concat(`${product.name}`)
+                                        favorites.concat(`${products.map(productSelected => productSelected.name)}`)
                                     );
                                     setFavorites(localStorage.getItem("favorites").split(","));
                                 }

@@ -46,7 +46,7 @@ function Search(props) {
             brand: ""
         },
     ]);
-    //Search feature - currently not working properly
+    //Retrieve searchQuery from the URL
     let search = window.location.search;
     let query = new URLSearchParams(search);
     let searchQuery = query.get("searchQuery");
@@ -123,7 +123,7 @@ function Search(props) {
                                     {product.measure} {product.unit}
                                 </p>
                                 <p>
-                                    {product.rating} stars ({product.ratingCount})
+                                    {product.rating}⭐ ({product.ratingCount})
                                 </p>
                                 <p>${product.price}</p>
                             </a>
