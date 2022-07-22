@@ -4,7 +4,8 @@
 
 * *Date Created*: June 12 2022
 * *Last Modification Date*: July 21 2022
-* *Heroku Link*: https://food4u-csci4177.herokuapp.com/
+* *Heroku Live App*: https://food4u-csci4177.herokuapp.com/
+* *Heroku API endpoint*: https://food4u-backend.herokuapp.com
 * *Gitlab URL*: https://git.cs.dal.ca/lidya/csci-4177-group-3-project.git
 
 ## Authors
