@@ -54,9 +54,8 @@ function Listing() {
         },
     ]);
 
-    //Search feature - currently not working properly
-    let search = window.location.search;
-    let query = new URLSearchParams(search);
+    let productIdParam = window.location.search;
+    let query = new URLSearchParams(productIdParam);
     let idQuery = query.get("id");
     console.log(idQuery);
     const fetchProducts = async () => {

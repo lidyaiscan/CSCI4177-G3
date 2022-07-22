@@ -46,7 +46,7 @@ function Search(props) {
             brand: ""
         },
     ]);
-    //Search feature - currently not working properly
+    //Retrieve searchQuery from the URL
     let search = window.location.search;
     let query = new URLSearchParams(search);
     let searchQuery = query.get("searchQuery");
